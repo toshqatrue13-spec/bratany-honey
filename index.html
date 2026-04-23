@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+  <!-- JSONBin.io налаштування для відгуків. Зареєструйтесь на jsonbin.io, створіть bin і вставте дані сюди -->
+  <meta name="jsonbin-id"  content="69e6151836566621a8d18822">
+  <meta name="jsonbin-key" content="$2a$10$a5m5bvcvvXMHPK12C/9uqufD5gFyBIh7HDJKrx/4DcLLyLuu7uLIy">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Братани Honey — Натуральний мед з Полтавщини</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="bee-wrap" id="beeWrap"></div>
+
+
+
+<nav>
+  <a href="#hero" class="nav-logo">
+    <img class="nav-logo-img" src="logo.png" alt="Братани Honey"/>
+    <div><span class="nav-logo-text">БРАТАНИ</span><span class="nav-logo-sub">HONEY</span></div>
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <span class="nav-dropdown-toggle">Продукція ▾</span>
+      <ul class="nav-dropdown-menu">
+        <li><a href="#products">Продукти</a></li>
+        <li><a href="#wholesale">Оптом</a></li>
+        <li><a href="#business">Бджолярам</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown">
+      <span class="nav-dropdown-toggle">Про мед ▾</span>
+      <ul class="nav-dropdown-menu">
+        <li><a href="#organic">Органіка</a></li>
+        <li><a href="#health">Користь</a></li>
+        <li><a href="#delivery">Доставка</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown">
+      <span class="nav-dropdown-toggle">Пасіка ▾</span>
+      <ul class="nav-dropdown-menu">
+        <li><a href="#apiary">Наша пасіка</a></li>
+        <li><a href="#production">Виробництво</a></li>
+        <li><a href="#beekeepers">Братани</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown">
+      <span class="nav-dropdown-toggle">Довіра ▾</span>
+      <ul class="nav-dropdown-menu">
+        <li><a href="#certificate">Сертифікат</a></li>
+        <li><a href="#reviews">Відгуки</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+    </li>
+    <li><a href="#order" class="nav-order-btn">Замовити 🍯</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+
+  <div class="mob-accordion" id="mobAccordion">
+
+    <div class="mob-acc-section" id="acc-0">
+      <button class="mob-acc-toggle" onclick="toggleMobAcc(0)">Продукція <span class="mob-acc-arrow">▾</span></button>
+      <div class="mob-acc-links">
+        <a href="#products"  onclick="closeMenu()">Продукти</a>
+        <a href="#wholesale" onclick="closeMenu()">Оптом</a>
+        <a href="#business"  onclick="closeMenu()">Бджолярам</a>
+      </div>
+    </div>
+
+    <div class="mob-acc-section" id="acc-1">
+      <button class="mob-acc-toggle" onclick="toggleMobAcc(1)">Про мед <span class="mob-acc-arrow">▾</span></button>
+      <div class="mob-acc-links">
+        <a href="#organic"  onclick="closeMenu()">Органіка</a>
+        <a href="#health"   onclick="closeMenu()">Користь</a>
+        <a href="#delivery" onclick="closeMenu()">Доставка</a>
+      </div>
+    </div>
+
+    <div class="mob-acc-section" id="acc-2">
+      <button class="mob-acc-toggle" onclick="toggleMobAcc(2)">Пасіка <span class="mob-acc-arrow">▾</span></button>
+      <div class="mob-acc-links">
+        <a href="#apiary"     onclick="closeMenu()">Наша пасіка</a>
+        <a href="#production" onclick="closeMenu()">Виробництво</a>
+        <a href="#beekeepers" onclick="closeMenu()">Братани</a>
+      </div>
+    </div>
+
+    <div class="mob-acc-section" id="acc-3">
+      <button class="mob-acc-toggle" onclick="toggleMobAcc(3)">Довіра <span class="mob-acc-arrow">▾</span></button>
+      <div class="mob-acc-links">
+        <a href="#certificate" onclick="closeMenu()">Сертифікат</a>
+        <a href="#reviews"     onclick="closeMenu()">Відгуки</a>
+        <a href="#contacts"    onclick="closeMenu()">Контакти</a>
+      </div>
+    </div>
+
+    <div class="mob-acc-footer">
+      <div class="mob-acc-contacts">
+        <a href="tel:0667591398">📱 0667591398 (Telegram)</a>
+        <a href="tel:0667591398">📞 0667591398 (Viber)</a>
+      </div>
+      <div class="mob-acc-socials">
+        <a class="mob-acc-social-btn" href="https://t.me/Marineta_1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram
+        </a>
+        <a class="mob-acc-social-btn" href="https://www.instagram.com/honey_nasoloda" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          Instagram
+        </a>
+        <a class="mob-acc-social-btn" href="https://www.facebook.com/share/1Q2Fo1fv9p/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a class="mob-acc-social-btn" href="https://www.tiktok.com/@romadanilkin0506_" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          TikTok
+        </a>
+      </div>
+      <a class="mob-acc-cta" href="#order" onclick="closeMenu()">Замовити мед 🍯</a>
+    </div>
+
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-logo-wrap"><img src="logo.png" alt="Братани Honey"/></div>
+  <h1>БРАТАНИ</h1>
+  <div class="hero-sub">Натуральний мед від серця</div>
+  <p class="hero-desc">Мед від двох братанів — зібраний з любов'ю на чистих полях України. Жодної хімії, тільки природа і традиція.</p>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;align-items:center">
+    <a href="#order" class="btn-honey">Замовити мед 🍯</a>
+    <a href="#products" class="btn-secondary-hero">Наша продукція ›</a>
+  </div>
+  <div class="free-delivery-badge">🚚 Безкоштовна доставка при замовленні від 1000 грн</div>
+  <div class="hero-production-info reveal">
+    <div class="hero-prod-icon">⚙️</div>
+    <p>Відкачка меду здійснюється на <strong>професійній, сертифікованій лінії</strong>. Усі процеси максимально автоматизовані — мед не контактує з руками, що забезпечує ідеальну чистоту продукту та збереження його природних властивостей.</p>
+  </div>
+</section>
+<div class="stripe-accent"></div>
+
+<section class="benefits reveal">
+  <div class="benefits-grid">
+    <div class="benefit-card"><span class="benefit-icon">🌿</span><h3>100% Органіка</h3><p>Без ГМО, без антибіотиків, без консервантів. Тільки чистий продукт природи.</p></div>
+    <div class="benefit-card"><span class="benefit-icon">🏡</span><h3>Власна пасіка</h3><p>Збираємо мед самі. Знаємо кожну бджолу особисто (майже).</p></div>
+    <div class="benefit-card"><span class="benefit-icon">🇺🇦</span><h3>Зроблено в Україні</h3><p>Полтавська область, екологічно чисті угіддя. Мед з рідних квітів.</p></div>
+    <div class="benefit-card"><span class="benefit-icon">📦</span><h3>Швидка доставка</h3><p>Відправляємо по всій Україні. Надійна упаковка, мед доїжджає цілим.</p></div>
+  </div>
+</section>
+<div class="stripe-accent"></div>
+
+
+<div class="stripe-accent"></div>
+<!-- PROCESS SECTION -->
+<section class="process-section">
+  <div class="section-title reveal">
+    <h2>Від Вулика до Столу</h2>
+    <div class="divider"></div>
+    <p>Кожна баночка проходить 6 кроків під нашим особистим контролем</p>
+  </div>
+  <div class="process-steps reveal">
+
+    <div class="process-step">
+      <div class="ps-icon-wrap">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="ps-svg">
+          <!-- Hive -->
+          <polygon points="40,8 58,18 58,38 40,48 22,38 22,18" fill="rgba(245,166,35,.12)" stroke="rgba(245,166,35,.6)" stroke-width="1.5"/>
+          <polygon points="40,14 52,21 52,35 40,42 28,35 28,21" fill="rgba(245,166,35,.08)" stroke="rgba(245,166,35,.3)" stroke-width="1"/>
+          <line x1="34" y1="26" x2="46" y2="26" stroke="rgba(245,166,35,.6)" stroke-width="1.2"/>
+          <line x1="34" y1="30" x2="46" y2="30" stroke="rgba(245,166,35,.5)" stroke-width="1"/>
+          <line x1="36" y1="22" x2="44" y2="22" stroke="rgba(245,166,35,.4)" stroke-width="1"/>
+          <!-- Bee -->
+          <ellipse cx="58" cy="58" rx="8" ry="5" fill="rgba(245,166,35,.7)" stroke="rgba(245,166,35,.9)" stroke-width="1"/>
+          <line x1="54" y1="55" x2="54" y2="61" stroke="#0F0A02" stroke-width="1.5"/>
+          <line x1="57" y1="54" x2="57" y2="62" stroke="#0F0A02" stroke-width="1.5"/>
+          <ellipse cx="65" cy="57" rx="4" ry="2.5" fill="rgba(255,255,255,.25)" stroke="rgba(255,255,255,.4)" stroke-width=".8"/>
+          <circle cx="54" cy="58" r="3" fill="rgba(232,131,10,.9)"/>
+        </svg>
+        <div class="ps-num">01</div>
+      </div>
+      <h3>Пасіка</h3>
+      <p>500+ вуликів на чистих полях Полтавщини. Бджоли збирають нектар з диких квітів</p>
+    </div>
+
+    <div class="process-arrow">›</div>
+
+    <div class="process-step">
+      <div class="ps-icon-wrap">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="ps-svg">
+          <!-- Sun -->
+          <circle cx="40" cy="30" r="12" fill="rgba(245,166,35,.15)" stroke="rgba(245,166,35,.6)" stroke-width="1.5"/>
+          <circle cx="40" cy="30" r="7" fill="rgba(245,166,35,.35)"/>
+          <line x1="40" y1="10" x2="40" y2="15" stroke="rgba(245,166,35,.7)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="40" y1="45" x2="40" y2="50" stroke="rgba(245,166,35,.7)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="20" y1="30" x2="25" y2="30" stroke="rgba(245,166,35,.7)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="55" y1="30" x2="60" y2="30" stroke="rgba(245,166,35,.7)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="26" y1="16" x2="29" y2="19" stroke="rgba(245,166,35,.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="51" y1="41" x2="54" y2="44" stroke="rgba(245,166,35,.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="54" y1="16" x2="51" y2="19" stroke="rgba(245,166,35,.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="29" y1="41" x2="26" y2="44" stroke="rgba(245,166,35,.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Flowers -->
+          <circle cx="22" cy="60" r="5" fill="rgba(245,166,35,.2)" stroke="rgba(245,166,35,.5)" stroke-width="1"/>
+          <line x1="22" y1="55" x2="22" y2="70" stroke="rgba(100,180,80,.6)" stroke-width="1.5"/>
+          <circle cx="40" cy="58" r="4" fill="rgba(255,107,26,.2)" stroke="rgba(255,107,26,.5)" stroke-width="1"/>
+          <line x1="40" y1="54" x2="40" y2="70" stroke="rgba(100,180,80,.6)" stroke-width="1.5"/>
+          <circle cx="58" cy="62" r="5" fill="rgba(245,166,35,.25)" stroke="rgba(245,166,35,.6)" stroke-width="1"/>
+          <line x1="58" y1="57" x2="58" y2="70" stroke="rgba(100,180,80,.6)" stroke-width="1.5"/>
+        </svg>
+        <div class="ps-num">02</div>
+      </div>
+      <h3>Збір нектару</h3>
+      <p>Бджоли опилюють квіти та несуть нектар. Тільки сонячні дні, тільки природа</p>
+    </div>
+
+    <div class="process-arrow">›</div>
+
+    <div class="process-step">
+      <div class="ps-icon-wrap">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="ps-svg">
+          <!-- Extractor drum -->
+          <ellipse cx="40" cy="25" rx="18" ry="8" fill="rgba(245,166,35,.12)" stroke="rgba(245,166,35,.5)" stroke-width="1.5"/>
+          <rect x="22" y="25" width="36" height="30" fill="rgba(245,166,35,.08)" stroke="rgba(245,166,35,.4)" stroke-width="1.5"/>
+          <ellipse cx="40" cy="55" rx="18" ry="8" fill="rgba(245,166,35,.12)" stroke="rgba(245,166,35,.5)" stroke-width="1.5"/>
+          <!-- Honey inside -->
+          <ellipse cx="40" cy="48" rx="12" ry="5" fill="rgba(232,131,10,.3)"/>
+          <!-- Handle -->
+          <line x1="40" y1="10" x2="40" y2="17" stroke="rgba(245,166,35,.7)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="34" y1="10" x2="46" y2="10" stroke="rgba(245,166,35,.7)" stroke-width="2" stroke-linecap="round"/>
+          <!-- Honey drop -->
+          <path d="M40 60 Q38 65 40 70 Q42 65 40 60" fill="rgba(245,166,35,.8)"/>
+        </svg>
+        <div class="ps-num">03</div>
+      </div>
+      <h3>Відкачка</h3>
+      <p>Ручна відкачка на власній центрифузі. Без нагрівання — зберігаємо всі ферменти</p>
+    </div>
+
+    <div class="process-arrow">›</div>
+
+    <div class="process-step">
+      <div class="ps-icon-wrap">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="ps-svg">
+          <!-- Magnifier / lab -->
+          <circle cx="35" cy="35" r="16" fill="rgba(245,166,35,.08)" stroke="rgba(245,166,35,.55)" stroke-width="1.5"/>
+          <circle cx="35" cy="35" r="10" fill="rgba(245,166,35,.15)"/>
+          <line x1="46" y1="46" x2="60" y2="60" stroke="rgba(245,166,35,.7)" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Check -->
+          <polyline points="29,35 33,40 42,29" fill="none" stroke="rgba(245,166,35,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="ps-num">04</div>
+      </div>
+      <h3>Перевірка якості</h3>
+      <p>Перевіряємо зрілість, вологість і смак. Не відповідає стандарту — не продаємо</p>
+    </div>
+
+    <div class="process-arrow">›</div>
+
+    <div class="process-step">
+      <div class="ps-icon-wrap">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="ps-svg">
+          <!-- Jar -->
+          <rect x="26" y="32" width="28" height="34" rx="3" fill="rgba(245,166,35,.12)" stroke="rgba(245,166,35,.55)" stroke-width="1.5"/>
+          <rect x="30" y="26" width="20" height="8" rx="2" fill="rgba(245,166,35,.2)" stroke="rgba(245,166,35,.6)" stroke-width="1.5"/>
+          <!-- Honey fill -->
+          <rect x="27" y="46" width="26" height="19" rx="3" fill="rgba(232,131,10,.35)"/>
+          <!-- Label -->
+          <rect x="30" y="38" width="20" height="14" rx="1" fill="rgba(245,166,35,.15)" stroke="rgba(245,166,35,.3)" stroke-width="1"/>
+          <line x1="33" y1="42" x2="47" y2="42" stroke="rgba(245,166,35,.5)" stroke-width="1"/>
+          <line x1="33" y1="45" x2="47" y2="45" stroke="rgba(245,166,35,.4)" stroke-width=".8"/>
+          <line x1="35" y1="48" x2="45" y2="48" stroke="rgba(245,166,35,.3)" stroke-width=".8"/>
+        </svg>
+        <div class="ps-num">05</div>
+      </div>
+      <h3>Фасування</h3>
+      <p>Розливаємо в чисту скляну або харчову пластикову тару. Без консервантів</p>
+    </div>
+
+    <div class="process-arrow">›</div>
+
+    <div class="process-step">
+      <div class="ps-icon-wrap">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="ps-svg">
+          <!-- House / delivery -->
+          <polygon points="40,10 65,30 60,30 60,65 20,65 20,30 15,30" fill="rgba(245,166,35,.1)" stroke="rgba(245,166,35,.55)" stroke-width="1.5"/>
+          <!-- Door -->
+          <rect x="34" y="48" width="12" height="17" rx="1" fill="rgba(245,166,35,.2)" stroke="rgba(245,166,35,.4)" stroke-width="1"/>
+          <!-- Window -->
+          <rect x="25" y="38" width="12" height="10" rx="1" fill="rgba(245,166,35,.12)" stroke="rgba(245,166,35,.3)" stroke-width="1"/>
+          <line x1="31" y1="38" x2="31" y2="48" stroke="rgba(245,166,35,.3)" stroke-width=".8"/>
+          <line x1="25" y1="43" x2="37" y2="43" stroke="rgba(245,166,35,.3)" stroke-width=".8"/>
+          <!-- Heart -->
+          <path d="M62 20 C62 17 58 15 58 18 C58 15 54 17 54 20 C54 23 58 27 58 27 C58 27 62 23 62 20Z" fill="rgba(245,166,35,.8)"/>
+        </svg>
+        <div class="ps-num">06</div>
+      </div>
+      <h3>До вашого столу</h3>
+      <p>Нова Пошта або самовивіз. Надійна упаковка — мед доїжджає цілим і свіжим</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="products">
+  <div class="section-title reveal">
+    <h2>Наші Продукти</h2>
+    <div class="divider"></div>
+    <p>Природні дари вулика — мед та бджолині продукти для вашого здоров'я</p>
+  </div>
+  <div class="products-grid">
+
+    <!-- SALE: Акацієвий -->
+    <div id="product-acacia" class="product-card sale reveal">
+      <div class="sale-ribbon">🔥 Знижка −25%</div>
+      <div class="product-img product-img-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80" alt="Акацієвий мед" loading="lazy"><div class="product-badge">Хіт</div></div>
+      <div class="product-info">
+        <h3>Акацієвий мед</h3>
+        <p>Ніжний і прозорий. Майже не цукриться. Ідеальний для щоденного вживання і чаю.</p>
+        <div class="taste-bars">
+          <div class="taste-bar-row"><span class="taste-label">Солодість</span><div class="taste-track"><div class="taste-fill" style="width:85%"></div></div></div>
+          <div class="taste-bar-row"><span class="taste-label">Аромат</span><div class="taste-track"><div class="taste-fill" style="width:70%"></div></div></div>
+          <div class="taste-bar-row"><span class="taste-label">Густота</span><div class="taste-track"><div class="taste-fill" style="width:40%"></div></div></div>
+        </div>
+        <div class="product-weight" data-prices='{"0.5 кг":75,"1 кг":150,"3 кг":450}' data-old='{"0.5 кг":100,"1 кг":200,"3 кг":600}' data-glass='{"0.5 кг":20,"1 кг":30,"3 кг":50}' data-unit="грн">
+          <span class="weight-tag active">0.5 кг</span><span class="weight-tag">1 кг</span><span class="weight-tag">3 кг</span>
+        </div>
+        <div class="card-container-picker">
+          <span class="card-container-tag active" data-container="plastic">🥤 Пластик</span>
+          <span class="card-container-tag" data-container="glass">🫙 Скло</span>
+        </div>
+        <div class="price-display">
+          <div><span class="price-old"></span><br><span class="price-amount sale-price"></span></div>
+          <span class="price-per">До кінця тижня</span>
+        </div>
+        <button class="btn-order" onclick="orderProduct('Акацієвий мед (зі знижкою!)')">Замовити зі знижкою</button>
+      </div>
+    </div>
+
+    <!-- Соняшниковий -->
+    <div id="product-sunflower" class="product-card reveal">
+      <div class="product-img product-img-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80" alt="Соняшниковий мед" loading="lazy"></div>
+      <div class="product-info">
+        <h3>Соняшниковий мед</h3>
+        <p>Класичний золотий мед із соняшнику. Щільний, солодкий, з приємним ароматом.</p>
+        <div class="taste-bars">
+          <div class="taste-bar-row"><span class="taste-label">Солодість</span><div class="taste-track"><div class="taste-fill" style="width:95%"></div></div></div>
+          <div class="taste-bar-row"><span class="taste-label">Аромат</span><div class="taste-track"><div class="taste-fill" style="width:60%"></div></div></div>
+          <div class="taste-bar-row"><span class="taste-label">Густота</span><div class="taste-track"><div class="taste-fill" style="width:80%"></div></div></div>
+        </div>
+        <div class="product-weight" data-prices='{"0.5 кг":90,"1 кг":180,"3 кг":520}' data-glass='{"0.5 кг":20,"1 кг":30,"3 кг":50}' data-unit="грн">
+          <span class="weight-tag active">0.5 кг</span><span class="weight-tag">1 кг</span><span class="weight-tag">3 кг</span>
+        </div>
+        <div class="card-container-picker">
+          <span class="card-container-tag active" data-container="plastic">🥤 Пластик</span>
+          <span class="card-container-tag" data-container="glass">🫙 Скло</span>
+        </div>
+        <div class="price-display"><div><span class="price-amount"></span></div><span class="price-per"></span></div>
+        <button class="btn-order" onclick="orderProduct('Соняшниковий мед')">Замовити</button>
+      </div>
+    </div>
+
+    <!-- Різнотравний -->
+    <div id="product-wildflower" class="product-card reveal">
+      <div class="product-img product-img-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80" alt="Різнотравний мед" loading="lazy"></div>
+      <div class="product-info">
+        <h3>Різнотравний мед</h3>
+        <p>Зібраний з лугових квітів. Багатий аромат і насичений смак. Наш фаворит!</p>
+        <div class="taste-bars">
+          <div class="taste-bar-row"><span class="taste-label">Солодість</span><div class="taste-track"><div class="taste-fill" style="width:78%"></div></div></div>
+          <div class="taste-bar-row"><span class="taste-label">Аромат</span><div class="taste-track"><div class="taste-fill" style="width:95%"></div></div></div>
+          <div class="taste-bar-row"><span class="taste-label">Густота</span><div class="taste-track"><div class="taste-fill" style="width:65%"></div></div></div>
+        </div>
+        <div class="product-weight" data-prices='{"0.5 кг":95,"1 кг":190,"3 кг":540}' data-glass='{"0.5 кг":20,"1 кг":30,"3 кг":50}' data-unit="грн">
+          <span class="weight-tag active">0.5 кг</span><span class="weight-tag">1 кг</span><span class="weight-tag">3 кг</span>
+        </div>
+        <div class="card-container-picker">
+          <span class="card-container-tag active" data-container="plastic">🥤 Пластик</span>
+          <span class="card-container-tag" data-container="glass">🫙 Скло</span>
+        </div>
+        <div class="price-display"><div><span class="price-amount"></span></div><span class="price-per"></span></div>
+        <button class="btn-order" onclick="orderProduct('Різнотравний мед')">Замовити</button>
+      </div>
+    </div>
+
+    <!-- Гречаний -->
+    <div id="product-buckwheat" class="product-card reveal">
+      <div class="product-img product-img-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80" alt="Гречаний мед" loading="lazy"><div class="product-badge">Еко</div></div>
+      <div class="product-info">
+        <h3>Гречаний мед</h3>
+        <p>Темний, ароматний, з характером. Рекордсмен за вмістом заліза і антиоксидантів.</p>
+        <div class="taste-bars">
+          <div class="taste-bar-row"><span class="taste-label">Солодість</span><div class="taste-track"><div class="taste-fill" style="width:65%"></div></div></div>
+          <div class="taste-bar-row"><span class="taste-label">Аромат</span><div class="taste-track"><div class="taste-fill" style="width:88%"></div></div></div>
+          <div class="taste-bar-row"><span class="taste-label">Густота</span><div class="taste-track"><div class="taste-fill" style="width:90%"></div></div></div>
+        </div>
+        <div class="product-weight" data-prices='{"0.5 кг":105,"1 кг":210,"3 кг":590}' data-glass='{"0.5 кг":20,"1 кг":30,"3 кг":50}' data-unit="грн">
+          <span class="weight-tag active">0.5 кг</span><span class="weight-tag">1 кг</span><span class="weight-tag">3 кг</span>
+        </div>
+        <div class="card-container-picker">
+          <span class="card-container-tag active" data-container="plastic">🥤 Пластик</span>
+          <span class="card-container-tag" data-container="glass">🫙 Скло</span>
+        </div>
+        <div class="price-display"><div><span class="price-amount"></span></div><span class="price-per"></span></div>
+        <button class="btn-order" onclick="orderProduct('Гречаний мед')">Замовити</button>
+      </div>
+    </div>
+
+    <!-- Пилок -->
+    <div id="product-pollen" class="product-card reveal">
+      <div class="product-img product-img-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80" alt="Бджолиний пилок" loading="lazy"></div>
+      <div class="product-info">
+        <h3>Бджолиний пилок</h3>
+        <p>Суперфуд від бджіл. Вітаміни, мінерали, амінокислоти в кожній гранулі.</p>
+        <div class="product-weight" data-prices='{"100 г":95,"250 г":220}' data-unit="грн">
+          <span class="weight-tag active">100 г</span><span class="weight-tag">250 г</span>
+        </div>
+        <div class="price-display"><div><span class="price-amount"></span></div><span class="price-per"></span></div>
+        <button class="btn-order" onclick="orderProduct('Бджолиний пилок')">Замовити</button>
+      </div>
+    </div>
+
+    <!-- Стільники -->
+    <div id="product-comb" class="product-card reveal">
+      <div class="product-img product-img-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80" alt="Мед у стільниках" loading="lazy"></div>
+      <div class="product-info">
+        <h3>Мед у стільниках</h3>
+        <p>Мед прямо з рамки у восковому стільнику. Максимальна свіжість і натуральність.</p>
+        <div class="product-weight" data-prices='{"300 г":160,"500 г":250}' data-unit="грн">
+          <span class="weight-tag active">300 г</span><span class="weight-tag">500 г</span>
+        </div>
+        <div class="price-display"><div><span class="price-amount"></span></div><span class="price-per"></span></div>
+        <button class="btn-order" onclick="orderProduct('Мед у стільниках')">Замовити</button>
+      </div>
+    </div>
+
+    <!-- Маточне молочко -->
+    <div id="product-royal" class="product-card reveal">
+      <div class="product-img product-img-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80" alt="Маточне молочко" loading="lazy"><div class="product-badge">Преміум</div></div>
+      <div class="product-info">
+        <h3>Маточне молочко</h3>
+        <p>Їжа для бджолиної матки — природний біостимулятор, джерело молодості і сили.</p>
+        <div class="product-weight" data-prices='{"10 г":350,"20 г":650}' data-unit="грн">
+          <span class="weight-tag active">10 г</span><span class="weight-tag">20 г</span>
+        </div>
+        <div class="price-display"><div><span class="price-amount"></span></div><span class="price-per"></span></div>
+        <button class="btn-order" onclick="orderProduct('Маточне молочко')">Замовити</button>
+      </div>
+    </div>
+
+    <!-- Бджолина перга -->
+    <div id="product-perga" class="product-card reveal">
+      <div class="product-img product-img-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80" alt="Бджолина перга" loading="lazy"><div class="product-badge">Новинка</div></div>
+      <div class="product-info">
+        <h3>Бджолина перга</h3>
+        <p>Ферментований пилок у стільниках — «хліб бджіл». Засвоюється краще за пилок, максимум користі.</p>
+        <div class="product-weight" data-prices='{"100 г":130,"250 г":290}' data-unit="грн">
+          <span class="weight-tag active">100 г</span><span class="weight-tag">250 г</span>
+        </div>
+        <div class="price-display"><div><span class="price-amount"></span></div><span class="price-per"></span></div>
+        <button class="btn-order" onclick="orderProduct('Бджолина перга')">Замовити</button>
+      </div>
+    </div>
+
+    <!-- Трутневий гомогенат -->
+    <div id="product-drone" class="product-card reveal">
+      <div class="product-img product-img-photo"><img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80" alt="Трутневий гомогенат" loading="lazy"><div class="product-badge">Рідкісний</div></div>
+      <div class="product-info">
+        <h3>Трутневий гомогенат</h3>
+        <p>Гомогенат трутневого розплоду — унікальне джерело природних гормонів і амінокислот.</p>
+        <div class="product-weight" data-prices='{"10 г":280,"20 г":520}' data-unit="грн">
+          <span class="weight-tag active">10 г</span><span class="weight-tag">20 г</span>
+        </div>
+        <div class="price-display"><div><span class="price-amount"></span></div><span class="price-per"></span></div>
+        <button class="btn-order" onclick="orderProduct('Трутневий гомогенат')">Замовити</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="stripe-accent"></div>
+
+<!-- ===== BUSINESS SECTION ===== -->
+<section id="business" class="business-section">
+  <div class="section-title reveal">
+    <h2>🐝 Для Бджолярів</h2>
+    <div class="divider"></div>
+    <p>Племінний матеріал та бджолопакети від власної пасіки — для старту або розширення вашої справи</p>
+  </div>
+
+  <div class="business-grid">
+
+    <div class="business-card reveal">
+      <div class="business-card-top">
+        <div class="business-card-badge">Сезонний товар</div>
+        <div class="business-card-icon">📦</div>
+        <h3>Бджолопакети</h3>
+        <p class="business-card-tagline">Готові бджолосімʼї для старту або розширення пасіки — карпатська порода, перевірена якість</p>
+      </div>
+
+      <div class="business-card-options">
+        <div class="business-option active" data-price="1800" onclick="selectBusinessOption(this)">
+          <span class="bo-label">4-рамковий</span>
+          <span class="bo-desc">Рамка розплоду + кормові рамки + матка</span>
+          <span class="bo-price">1 800 грн</span>
+        </div>
+        <div class="business-option" data-price="2600" onclick="selectBusinessOption(this)">
+          <span class="bo-label">6-рамковий</span>
+          <span class="bo-desc">Посилений пакет — швидкий старт медозбору</span>
+          <span class="bo-price">2 600 грн</span>
+        </div>
+      </div>
+
+      <div class="business-card-details">
+        <div class="business-detail-grid">
+          <div class="bd-item"><span class="bd-icon">🐝</span><div><strong>Порода</strong><span>Карпатська — спокійна, продуктивна, зимостійка</span></div></div>
+          <div class="bd-item"><span class="bd-icon">👑</span><div><strong>Матка</strong><span>Плідна, перевірена на яйцекладку</span></div></div>
+          <div class="bd-item"><span class="bd-icon">📅</span><div><strong>Сезон</strong><span>Квітень — червень, попередній запис обовʼязковий</span></div></div>
+          <div class="bd-item"><span class="bd-icon">🚚</span><div><strong>Доставка</strong><span>Самовивіз або доставка по Полтавщині</span></div></div>
+          <div class="bd-item"><span class="bd-icon">💬</span><div><strong>Консультація</strong><span>Безкоштовна порада по підсаджуванню та догляду</span></div></div>
+          <div class="bd-item"><span class="bd-icon">✅</span><div><strong>Гарантія</strong><span>Здорові сімʼї від власної пасіки без антибіотиків</span></div></div>
+        </div>
+      </div>
+
+      <div class="business-card-footer">
+        <div class="business-price-wrap">
+          <span class="business-price-label">Вибрано:</span>
+          <span class="business-price-val" id="businessPrice">1 800 грн</span>
+        </div>
+        <button class="business-order-btn" onclick="orderProduct('Бджолопакети')">Замовити / Уточнити 🐝</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="stripe-accent"></div>
+
+<!-- ===== WHOLESALE SECTION ===== -->
+<section id="wholesale" class="wholesale-section">
+  <div class="wholesale-inner reveal">
+    <div class="wholesale-left">
+      <div class="wholesale-tag">🛒 Оптове замовлення</div>
+      <h2>Замовляєш від 5 літрів?</h2>
+      <p class="wholesale-sub">Ціна та тара обговорюються індивідуально — напряму з братанами</p>
+      <ul class="wholesale-perks">
+        <li><span class="wp-icon">💰</span><div><strong>Індивідуальна ціна</strong><span>Чим більше — тим вигідніше. Обговоримо умови особисто</span></div></li>
+        <li><span class="wp-icon">🫙</span><div><strong>Будь-яка тара</strong><span>Пластик, скло, відра — підберемо під ваші потреби</span></div></li>
+        <li><span class="wp-icon">🚚</span><div><strong>Доставка включена</strong><span>При великому замовленні організуємо доставку</span></div></li>
+        <li><span class="wp-icon">🤝</span><div><strong>Постійним клієнтам</strong><span>Кафе, магазини, ринки — є особливі умови для партнерів</span></div></li>
+      </ul>
+    </div>
+    <div class="wholesale-right">
+      <div class="wholesale-card">
+        <div class="wholesale-honey-icon">🍯</div>
+        <div class="wholesale-volumes">
+          <div class="wholesale-vol">5 л</div>
+          <div class="wholesale-vol-arrow">→</div>
+          <div class="wholesale-vol active">10 л</div>
+          <div class="wholesale-vol-arrow">→</div>
+          <div class="wholesale-vol">20+ л</div>
+        </div>
+        <p class="wholesale-note">Від 5 літрів — ціна за домовленістю</p>
+        <a href="https://t.me/Marineta_1" target="_blank" class="wholesale-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Написати в Telegram
+        </a>
+        <a href="tel:0667591398" class="wholesale-btn-secondary">📞 Зателефонувати</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe-accent"></div>
+
+<section id="organic" class="organic">
+  <div class="organic-grid">
+    <div class="organic-text reveal">
+      <h2>Повністю<br>Органічний Продукт</h2>
+      <p>Ми працюємо за принципами еко-бджільництва: без використання хімічних препаратів, стимуляторів та штучних домішок. Лише чиста природа, здорові бджоли та справжній смак меду.</p>
+      <p>Наша пасіка розташована далеко від міст і промислових підприємств, серед незайманих полів Полтавщини. Бджоли збирають нектар виключно з дикорослих та польових квітів.</p>
+      <p>Ми особисто контролюємо кожен етап — від вулика до вашого столу. Це наша гарантія якості.</p>
+      <div class="organic-eco-list">
+        <div class="organic-eco-item">🌿 100% натуральний продукт</div>
+        <div class="organic-eco-item">🌿 Екологічно чисті території</div>
+        <div class="organic-eco-item">🌿 Жодної хімії — тільки природа</div>
+      </div>
+      <div class="cert-badges">
+        <span class="cert-badge">✅ Без ГМО</span>
+        <span class="cert-badge">✅ Без антибіотиків</span>
+        <span class="cert-badge">✅ Без консервантів</span>
+        <span class="cert-badge">✅ Ручне збирання</span>
+      </div>
+    </div>
+    <div class="organic-stats reveal">
+      <div class="stat-box"><span class="num">10+</span><span class="label">Років досвіду</span></div>
+      <div class="stat-box"><span class="num">500+</span><span class="label">Вуликів</span></div>
+      <div class="stat-box"><span class="num">0%</span><span class="label">Хімії</span></div>
+      <div class="stat-box"><span class="num">100%</span><span class="label">Натуральний</span></div>
+    </div>
+  </div>
+</section>
+<div class="stripe-accent"></div>
+
+<section id="health" class="health">
+  <div class="section-title reveal"><h2>Чому Мед Корисний</h2><div class="divider"></div><p>Наукові факти про користь натурального меду для вашого організму</p></div>
+  <div class="health-grid">
+    <div class="health-card reveal"><div class="icon">🛡️</div><div><h3>Зміцнює імунітет</h3><p>Містить антиоксиданти, флавоноїди та пропердин, які активують захисні сили організму.</p></div></div>
+    <div class="health-card reveal"><div class="icon">❤️</div><div><h3>Корисний для серця</h3><p>Знижує рівень "поганого" холестерину, покращує роботу серцево-судинної системи.</p></div></div>
+    <div class="health-card reveal"><div class="icon">🧠</div><div><h3>Живить мозок</h3><p>Натуральні цукри миттєво заряджають мозок енергією. Покращує пам'ять і концентрацію.</p></div></div>
+    <div class="health-card reveal"><div class="icon">😴</div><div><h3>Покращує сон</h3><p>Ложка меду перед сном стимулює вироблення мелатоніну і сприяє здоровому сну.</p></div></div>
+    <div class="health-card reveal"><div class="icon">🌡️</div><div><h3>Лікує застуду</h3><p>Природний антибактеріальний засіб. Пом'якшує горло, знімає кашель, прискорює одужання.</p></div></div>
+    <div class="health-card reveal"><div class="icon">⚡</div><div><h3>Дає енергію</h3><p>Фруктоза і глюкоза швидко засвоюються. Ідеальний натуральний енергетик для спортсменів.</p></div></div>
+  </div>
+</section>
+<div class="stripe-accent"></div>
+
+
+<div class="stripe-accent"></div>
+<!-- HONEY FACTS -->
+<section class="facts-section">
+  <div class="section-title reveal">
+    <h2>Цікаві Факти про Мед</h2>
+    <div class="divider"></div>
+    <p>Те, що вас здивує — перевірено наукою</p>
+  </div>
+  <div class="facts-grid reveal">
+
+    <div class="fact-card">
+      <div class="fact-visual">
+        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+          <!-- Infinite symbol / eternity -->
+          <path d="M30,40 C30,30 20,22 14,28 C8,34 8,46 14,52 C20,58 32,52 40,40 C48,28 60,22 66,28 C72,34 72,46 66,52 C60,58 50,50 50,40" fill="none" stroke="rgba(245,166,35,.8)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M50,40 C50,30 62,22 68,28" fill="none" stroke="rgba(245,166,35,.4)" stroke-width="2" stroke-linecap="round"/>
+          <text x="50" y="72" text-anchor="middle" fill="rgba(245,166,35,.5)" font-family="sans-serif" font-size="9" letter-spacing="1">ВІЧНИЙ ПРОДУКТ</text>
+        </svg>
+      </div>
+      <div class="fact-num">3000+</div>
+      <h3>Років зберігається мед</h3>
+      <p>У єгипетських пірамідах знайшли мед, якому понад 3000 років — і він був їстівним. Мед не псується ніколи.</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-visual">
+        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+          <!-- Bee flying path -->
+          <path d="M15,60 Q25,20 50,40 Q75,60 85,20" fill="none" stroke="rgba(245,166,35,.3)" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <!-- Flowers -->
+          <circle cx="15" cy="62" r="5" fill="rgba(245,166,35,.3)" stroke="rgba(245,166,35,.6)" stroke-width="1"/>
+          <circle cx="50" cy="40" r="4" fill="rgba(255,107,26,.3)" stroke="rgba(255,107,26,.6)" stroke-width="1"/>
+          <circle cx="85" cy="20" r="5" fill="rgba(245,166,35,.3)" stroke="rgba(245,166,35,.6)" stroke-width="1"/>
+          <!-- Bee -->
+          <ellipse cx="65" cy="52" rx="7" ry="4.5" fill="rgba(245,166,35,.7)" stroke="rgba(245,166,35,.9)" stroke-width="1"/>
+          <line x1="62" y1="50" x2="62" y2="54" stroke="#0F0A02" stroke-width="1.2"/>
+          <line x1="65" y1="49" x2="65" y2="55" stroke="#0F0A02" stroke-width="1.2"/>
+          <ellipse cx="70" cy="51" rx="4" ry="2.2" fill="rgba(255,255,255,.2)" stroke="rgba(255,255,255,.35)" stroke-width=".8"/>
+          <text x="50" y="76" text-anchor="middle" fill="rgba(245,166,35,.5)" font-family="sans-serif" font-size="9" letter-spacing="1">ПОДОРОЖ БДЖОЛИ</text>
+        </svg>
+      </div>
+      <div class="fact-num">80 000</div>
+      <h3>Км долає бджола за 1 кг меду</h3>
+      <p>Щоб зібрати один кілограм меду, бджоли разом облітають відстань, рівну двом екваторам Землі.</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-visual">
+        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+          <!-- Honeycomb cells -->
+          <polygon points="30,20 42,13 54,20 54,34 42,41 30,34" fill="rgba(245,166,35,.15)" stroke="rgba(245,166,35,.5)" stroke-width="1.5"/>
+          <polygon points="54,20 66,13 78,20 78,34 66,41 54,34" fill="rgba(245,166,35,.1)" stroke="rgba(245,166,35,.4)" stroke-width="1.5"/>
+          <polygon points="18,34 30,27 42,34 42,48 30,55 18,48" fill="rgba(232,131,10,.12)" stroke="rgba(245,166,35,.4)" stroke-width="1.5"/>
+          <polygon points="42,34 54,27 66,34 66,48 54,55 42,48" fill="rgba(245,166,35,.18)" stroke="rgba(245,166,35,.6)" stroke-width="1.5"/>
+          <polygon points="66,34 78,27 90,34 90,48 78,55 66,48" fill="rgba(245,166,35,.1)" stroke="rgba(245,166,35,.35)" stroke-width="1.5"/>
+          <!-- Drop inside center hex -->
+          <path d="M54,32 Q52,36 54,40 Q56,36 54,32" fill="rgba(245,166,35,.8)"/>
+          <text x="50" y="72" text-anchor="middle" fill="rgba(245,166,35,.5)" font-family="sans-serif" font-size="9" letter-spacing="1">УНІКАЛЬНА СТРУКТУРА</text>
+        </svg>
+      </div>
+      <div class="fact-num">181</div>
+      <h3>Корисна речовина в меді</h3>
+      <p>Натуральний мед містить 181 біологічно активну речовину: вітаміни, мінерали, ферменти, амінокислоти.</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-visual">
+        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shield / immunity -->
+          <path d="M50,8 L72,18 L72,42 Q72,60 50,70 Q28,60 28,42 L28,18 Z" fill="rgba(245,166,35,.1)" stroke="rgba(245,166,35,.55)" stroke-width="1.5"/>
+          <path d="M50,16 L65,23 L65,42 Q65,55 50,63 Q35,55 35,42 L35,23 Z" fill="rgba(245,166,35,.08)"/>
+          <!-- Check inside -->
+          <polyline points="40,40 47,48 62,30" fill="none" stroke="rgba(245,166,35,.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="50" y="76" text-anchor="middle" fill="rgba(245,166,35,.5)" font-family="sans-serif" font-size="9" letter-spacing="1">ПРИРОДНИЙ ЗАХИСТ</text>
+        </svg>
+      </div>
+      <div class="fact-num">99%</div>
+      <h3>Антибактеріальна активність</h3>
+      <p>Мед знищує до 99% відомих бактерій. Навіть MRSA — стафілокок, стійкий до антибіотиків.</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-visual">
+        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+          <!-- Brain -->
+          <ellipse cx="50" cy="38" rx="24" ry="20" fill="rgba(245,166,35,.1)" stroke="rgba(245,166,35,.5)" stroke-width="1.5"/>
+          <path d="M38,28 Q42,22 50,24 Q58,22 62,28" fill="none" stroke="rgba(245,166,35,.4)" stroke-width="1.2"/>
+          <path d="M32,38 Q36,32 40,36 Q44,40 48,34 Q52,28 56,34 Q60,40 64,36 Q68,32 70,38" fill="none" stroke="rgba(245,166,35,.5)" stroke-width="1.2"/>
+          <path d="M34,46 Q40,52 50,50 Q60,52 66,46" fill="none" stroke="rgba(245,166,35,.35)" stroke-width="1.2"/>
+          <!-- Spark -->
+          <path d="M50,12 L48,20 L53,18 L48,28" fill="none" stroke="rgba(245,166,35,.8)" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="50" y="72" text-anchor="middle" fill="rgba(245,166,35,.5)" font-family="sans-serif" font-size="9" letter-spacing="1">ЖИВЛЕННЯ МОЗКУ</text>
+        </svg>
+      </div>
+      <div class="fact-num">25 г</div>
+      <h3>Меду — денна норма для мозку</h3>
+      <p>Всього 25 грамів натурального меду на день забезпечують мозок оптимальною кількістю глюкози.</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-visual">
+        <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+          <!-- Calendar / seasons -->
+          <rect x="20" y="18" width="60" height="46" rx="3" fill="rgba(245,166,35,.08)" stroke="rgba(245,166,35,.45)" stroke-width="1.5"/>
+          <rect x="20" y="18" width="60" height="14" rx="3" fill="rgba(245,166,35,.2)"/>
+          <line x1="20" y1="32" x2="80" y2="32" stroke="rgba(245,166,35,.3)" stroke-width="1"/>
+          <!-- Grid dots -->
+          <circle cx="32" cy="42" r="2.5" fill="rgba(245,166,35,.5)"/>
+          <circle cx="44" cy="42" r="2.5" fill="rgba(245,166,35,.5)"/>
+          <circle cx="56" cy="42" r="2.5" fill="rgba(245,166,35,.7)"/>
+          <circle cx="68" cy="42" r="2.5" fill="rgba(245,166,35,.4)"/>
+          <circle cx="32" cy="52" r="2.5" fill="rgba(245,166,35,.4)"/>
+          <circle cx="44" cy="52" r="2.5" fill="rgba(245,166,35,.7)"/>
+          <circle cx="56" cy="52" r="2.5" fill="rgba(245,166,35,.5)"/>
+          <text x="50" y="26" text-anchor="middle" fill="rgba(245,166,35,.9)" font-family="sans-serif" font-size="9" font-weight="bold">СЕЗОН ЗБОРУ</text>
+          <text x="50" y="68" text-anchor="middle" fill="rgba(245,166,35,.5)" font-family="sans-serif" font-size="9" letter-spacing="1">ТРАВЕНЬ — СЕРПЕНЬ</text>
+        </svg>
+      </div>
+      <div class="fact-num">4 міс.</div>
+      <h3>Активний сезон збору меду</h3>
+      <p>З травня по серпень наші бджоли працюють на повну. Решту року мед дозріває і зберігається у вуликах.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="delivery" class="delivery">
+  <div class="section-title reveal"><h2>Умови Доставки</h2><div class="divider"></div><p>Відправляємо по всій Україні зручними для вас способами</p></div>
+  <div class="delivery-grid">
+    <div class="delivery-card reveal"><div class="d-icon">🚚</div><h3>Нова Пошта</h3><p>Відправка 1-2 рази на тиждень. Доставка 1-3 дні по Україні. Надійна упаковка — мед не розіллється.</p></div>
+    <div class="delivery-card reveal"><div class="d-icon">📮</div><h3>Укрпошта</h3><p>Для замовлень у віддалені населені пункти. Доставка 3-5 робочих днів. Відстеження посилки.</p></div>
+    <div class="delivery-card reveal"><div class="d-icon">💰</div><h3>Оплата</h3><p>Оплата після отримання на відділенні, або передоплата на картку. Домовляємося індивідуально.</p></div>
+  </div>
+</section>
+<div class="stripe-accent"></div>
+
+<section id="order" class="order-section">
+  <div class="section-title reveal"><h2>Замовити Мед</h2><div class="divider"></div><p>Заповніть форму і ми зв'яжемося з вами найближчим часом</p></div>
+  <div class="form-wrap reveal">
+    <div id="orderForm">
+      <div class="form-row">
+        <div class="form-group"><label>Ваше ім'я</label><input type="text" id="fname" placeholder="Іван Петренко"/></div>
+        <div class="form-group"><label>Номер телефону</label><input type="tel" id="fphone" placeholder="+38 0__ ___ ____"/></div>
+      </div>
+      <div class="form-group"><label>Місто доставки</label><input type="text" id="fcity" placeholder="Ваше місто"/></div>
+      <div class="form-group">
+        <label>Продукт</label>
+        <select id="fproduct">
+          <option value="">— Оберіть продукт —</option>
+          <option>Акацієвий мед (зі знижкою!)</option><option>Соняшниковий мед</option>
+          <option>Різнотравний мед</option><option>Гречаний мед</option>
+          <option>Бджолиний пилок</option><option>Бджолина перга</option>
+          <option>Мед у стільниках</option><option>Маточне молочко</option>
+          <option>Трутневий гомогенат</option><option>Бджолопакети</option>
+          <option>Декілька продуктів</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Коментар / Кількість</label><textarea id="fcomment" placeholder="Розкажіть що саме вам потрібно, вагу, кількість..."></textarea></div>
+      <button class="form-submit" onclick="submitOrder()">Надіслати замовлення 🍯</button>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <div style="font-size:56px;margin-bottom:14px">🍯</div>
+      <div style="background:linear-gradient(135deg,#FFD06B,#F5A623);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:22px;font-family:Georgia;margin-bottom:12px">Дякуємо за замовлення!</div>
+      <div style="color:var(--text-muted);font-family:sans-serif;font-size:14px;line-height:1.8">Братани вже знають про вас і зв'яжуться найближчим часом 🐝</div>
+    </div>
+  </div>
+</section>
+<div class="stripe-accent"></div>
+
+<!-- ===== APIARY SECTION ===== -->
+<section id="apiary" class="apiary-section reveal">
+  <div class="section-title reveal">
+    <h2>Наша Пасіка</h2>
+    <div class="divider"></div>
+    <p>Серце нашого меду — живі вулики серед полтавських полів</p>
+  </div>
+  <div class="apiary-grid">
+    <div class="apiary-photo-placeholder reveal">
+      <div class="placeholder-inner">
+        <span class="placeholder-icon">🏡</span>
+        <span class="placeholder-label">Фото пасіки<br><small>Скоро тут будуть фотографії</small></span>
+      </div>
+    </div>
+    <div class="apiary-photo-placeholder reveal">
+      <div class="placeholder-inner">
+        <span class="placeholder-icon">🐝</span>
+        <span class="placeholder-label">Вулики<br><small>Скоро тут будуть фотографії</small></span>
+      </div>
+    </div>
+    <div class="apiary-photo-placeholder reveal">
+      <div class="placeholder-inner">
+        <span class="placeholder-icon">🌸</span>
+        <span class="placeholder-label">Квіти та луки<br><small>Скоро тут будуть фотографії</small></span>
+      </div>
+    </div>
+    <div class="apiary-photo-placeholder reveal">
+      <div class="placeholder-inner">
+        <span class="placeholder-icon">🍯</span>
+        <span class="placeholder-label">Збір меду<br><small>Скоро тут будуть фотографії</small></span>
+      </div>
+    </div>
+  </div>
+  <div class="apiary-intro reveal">
+    <p>Пасіка Братанів — це про чесний мед. Наші бджоли працюють у чистих природних місцях, далеко від міста та забруднень. Ми не використовуємо хімію — тільки природні методи догляду за бджолами. Тому наш мед — це справжній смак природи, як колись.</p>
+  </div>
+  <div class="apiary-desc reveal">
+    <div class="apiary-desc-card">
+      <span class="apiary-desc-icon">📍</span>
+      <div>
+        <h3>Полтавська область</h3>
+        <p>Наша пасіка розташована в екологічно чистому районі Полтавщини, далеко від доріг та промислових зон. Чисте повітря, незаймані луки та різнотрав'я — ідеальне місце для бджіл.</p>
+      </div>
+    </div>
+    <div class="apiary-desc-card">
+      <span class="apiary-desc-icon">🪣</span>
+      <div>
+        <h3>500+ Вуликів</h3>
+        <p>Ми утримуємо понад 50 сімей карпатських бджіл. Кожен вулик регулярно оглядається, бджоли здорові та продуктивні. Мед збирається лише після повного дозрівання.</p>
+      </div>
+    </div>
+    <div class="apiary-desc-card">
+      <span class="apiary-desc-icon">🌿</span>
+      <div>
+        <h3>Природне середовище</h3>
+        <p>Пасіка розташована у заповідних зонах серед мішаних лісів — у природному середовищі, де бджоли збирають нектар із різнотрав'я та лісових квітів. На соняшникові та гречані поля братани виїжджають окремо — щоб забезпечити різноманітність медів та зберегти чистоту кожного сорту.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stripe-accent"></div>
+
+<!-- ===== PRODUCTION SECTION ===== -->
+<section id="production" class="apiary-section reveal">
+  <div class="section-title reveal">
+    <h2>Виробництво</h2>
+    <div class="divider"></div>
+    <p>Від вулика до баночки — під повним контролем якості</p>
+  </div>
+  <div class="apiary-grid">
+    <div class="apiary-photo-placeholder reveal">
+      <div class="placeholder-inner">
+        <span class="placeholder-icon">⚙️</span>
+        <span class="placeholder-label">Лінія відкачки<br><small>Скоро тут будуть фотографії</small></span>
+      </div>
+    </div>
+    <div class="apiary-photo-placeholder reveal">
+      <div class="placeholder-inner">
+        <span class="placeholder-icon">🔬</span>
+        <span class="placeholder-label">Контроль якості<br><small>Скоро тут будуть фотографії</small></span>
+      </div>
+    </div>
+    <div class="apiary-photo-placeholder reveal">
+      <div class="placeholder-inner">
+        <span class="placeholder-icon">🍯</span>
+        <span class="placeholder-label">Фасування<br><small>Скоро тут будуть фотографії</small></span>
+      </div>
+    </div>
+    <div class="apiary-photo-placeholder reveal">
+      <div class="placeholder-inner">
+        <span class="placeholder-icon">📦</span>
+        <span class="placeholder-label">Готова продукція<br><small>Скоро тут будуть фотографії</small></span>
+      </div>
+    </div>
+  </div>
+  <div class="apiary-desc reveal">
+    <div class="apiary-desc-card">
+      <span class="apiary-desc-icon">🍯</span>
+      <div>
+        <h3>Сучасне виробництво — гарантія якості</h3>
+        <p>Відкачка меду здійснюється на професійній, сертифікованій лінії. Усі процеси максимально автоматизовані — мед не контактує з руками, що забезпечує ідеальну чистоту продукту та збереження його природних властивостей.</p>
+      </div>
+    </div>
+    <div class="apiary-desc-card">
+      <span class="apiary-desc-icon">🔬</span>
+      <div>
+        <h3>Контроль на кожному етапі</h3>
+        <p>Ми дотримуємося високих стандартів якості — від збору нектару до фасування. Ви отримуєте продукт, який відповідає сучасним вимогам безпеки та натуральності.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="stripe-accent"></div>
+
+<!-- ===== BEEKEEPERS SECTION ===== -->
+<section id="beekeepers" class="beekeepers-section">
+  <div class="section-title reveal">
+    <h2>Знайомтесь — Братани</h2>
+    <div class="divider"></div>
+    <p>Два друга, одна справа, безкінечна любов до бджіл та натурального меду</p>
+  </div>
+  <div class="beekeepers-grid">
+
+    <div class="beekeeper-card reveal">
+      <div class="beekeeper-photo-wrap">
+        <div class="beekeeper-photo-placeholder">
+          <span class="bk-photo-icon">👨‍🌾</span>
+          <span class="bk-photo-label">Фото Роми<br><small>Скоро тут буде фото</small></span>
+        </div>
+        <div class="beekeeper-badge">Пасічник</div>
+      </div>
+      <div class="beekeeper-info">
+        <h3>Рома</h3>
+        <p class="bk-role">Засновник · Головний пасічник</p>
+        <p class="bk-desc">Опис Роми буде доданий пізніше. Тут розкажемо про його шлях у бджільництві, досвід та любов до своєї справи.</p>
+      </div>
+    </div>
+
+    <div class="beekeeper-card reveal">
+      <div class="beekeeper-photo-wrap">
+        <div class="beekeeper-photo-placeholder">
+          <span class="bk-photo-icon">👨‍🌾</span>
+          <span class="bk-photo-label">Фото Юри<br><small>Скоро тут буде фото</small></span>
+        </div>
+        <div class="beekeeper-badge">Пасічник</div>
+      </div>
+      <div class="beekeeper-info">
+        <h3>Юра</h3>
+        <p class="bk-role">Засновник · Головний пасічник</p>
+        <p class="bk-desc">Опис Юри буде доданий пізніше. Тут розкажемо про його досвід, захоплення та внесок у спільну справу братанів.</p>
+      </div>
+    </div>
+
+       <div class="beekeeper-card reveal">
+      <div class="beekeeper-photo-wrap">
+        <div class="beekeeper-photo-placeholder">
+          <span class="bk-photo-icon">👨‍🌾</span>
+          <span class="bk-photo-label">Фото Марини<br><small>Скоро тут буде фото</small></span>
+        </div>
+        <div class="beekeeper-badge">Менеджер</div>
+      </div>
+      <div class="beekeeper-info">
+        <h3>Марина</h3>
+        <p class="bk-role">Менеджер</p>
+        <p class="bk-desc">Опис Марини буде доданий пізніше. Тут розкажемо про його шлях у бджільництві, досвід та любов до своєї справи.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="stripe-accent"></div>
+
+<!-- ===== CERTIFICATE SECTION ===== -->
+<section id="certificate" class="certificate-section">
+  <div class="section-title reveal">
+    <h2>Сертифікат якості</h2>
+    <div class="divider"></div>
+    <p>Наш мед підтверджений лабораторними аналізами — 100% натуральний, без домішок</p>
+  </div>
+
+  <div class="certificate-grid reveal">
+
+    <!-- Cert card 1 -->
+    <div class="cert-card">
+      <div class="cert-photo-placeholder">
+        <div class="cert-placeholder-inner">
+          <div class="cert-placeholder-icon">🏅</div>
+          <div class="cert-placeholder-text">Сертифікат органічного меду</div>
+          <div class="cert-placeholder-sub">Фото буде додано пізніше</div>
+        </div>
+        <div class="cert-corner cert-corner-tl"></div>
+        <div class="cert-corner cert-corner-tr"></div>
+        <div class="cert-corner cert-corner-bl"></div>
+        <div class="cert-corner cert-corner-br"></div>
+      </div>
+      <div class="cert-card-info">
+        <div class="cert-card-title">Органічний продукт</div>
+        <div class="cert-card-desc">Підтверджено відповідність стандартам органічного виробництва. Жодної хімії та штучних добавок.</div>
+      </div>
+    </div>
+
+    <!-- Cert card 2 -->
+    <div class="cert-card">
+      <div class="cert-photo-placeholder">
+        <div class="cert-placeholder-inner">
+          <div class="cert-placeholder-icon">🔬</div>
+          <div class="cert-placeholder-text">Лабораторний аналіз</div>
+          <div class="cert-placeholder-sub">Фото буде додано пізніше</div>
+        </div>
+        <div class="cert-corner cert-corner-tl"></div>
+        <div class="cert-corner cert-corner-tr"></div>
+        <div class="cert-corner cert-corner-bl"></div>
+        <div class="cert-corner cert-corner-br"></div>
+      </div>
+      <div class="cert-card-info">
+        <div class="cert-card-title">Лабораторні аналізи</div>
+        <div class="cert-card-desc">Кожна партія меду проходить незалежну лабораторну перевірку на вміст вологи, цукрів та чистоту.</div>
+      </div>
+    </div>
+
+    <!-- Cert card 3 -->
+    <div class="cert-card">
+      <div class="cert-photo-placeholder">
+        <div class="cert-placeholder-inner">
+          <div class="cert-placeholder-icon">🌿</div>
+          <div class="cert-placeholder-text">Еко-відповідність</div>
+          <div class="cert-placeholder-sub">Фото буде додано пізніше</div>
+        </div>
+        <div class="cert-corner cert-corner-tl"></div>
+        <div class="cert-corner cert-corner-tr"></div>
+        <div class="cert-corner cert-corner-bl"></div>
+        <div class="cert-corner cert-corner-br"></div>
+      </div>
+      <div class="cert-card-info">
+        <div class="cert-card-title">Без антибіотиків</div>
+        <div class="cert-card-desc">Підтверджено відсутність антибіотиків, пестицидів та важких металів. Безпечно для дітей та дорослих.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Guarantee bar -->
+  <div class="cert-guarantee-bar reveal">
+    <div class="cert-guarantee-item">
+      <span class="cert-g-icon">✅</span>
+      <span>Без ГМО</span>
+    </div>
+    <div class="cert-guarantee-divider"></div>
+    <div class="cert-guarantee-item">
+      <span class="cert-g-icon">✅</span>
+      <span>Без антибіотиків</span>
+    </div>
+    <div class="cert-guarantee-divider"></div>
+    <div class="cert-guarantee-item">
+      <span class="cert-g-icon">✅</span>
+      <span>Без консервантів</span>
+    </div>
+    <div class="cert-guarantee-divider"></div>
+    <div class="cert-guarantee-item">
+      <span class="cert-g-icon">✅</span>
+      <span>Лабораторний контроль</span>
+    </div>
+    <div class="cert-guarantee-divider"></div>
+    <div class="cert-guarantee-item">
+      <span class="cert-g-icon">✅</span>
+      <span>100% натуральний</span>
+    </div>
+  </div>
+</section>
+
+<div class="stripe-accent"></div>
+
+<!-- ===== REVIEWS SECTION ===== -->
+<section id="reviews" class="reviews-section">
+  <div class="section-title reveal">
+    <h2>Відгуки покупців</h2>
+    <div class="divider"></div>
+    <p>Що кажуть ті, хто вже скуштував наш мед 🍯</p>
+  </div>
+
+  <div class="reviews-stats reveal">
+    <div class="reviews-stat-item">
+      <span class="reviews-stat-num" id="revAvgRating">5.0</span>
+      <div class="reviews-stat-stars" id="revStatsStars">★★★★★</div>
+      <span class="reviews-stat-label">Середня оцінка</span>
+    </div>
+    <div class="reviews-stat-divider"></div>
+    <div class="reviews-stat-item">
+      <span class="reviews-stat-num" id="revTotalCount">8</span>
+      <div class="reviews-stat-stars" style="color:var(--text-muted);font-size:13px;font-family:sans-serif;letter-spacing:1px">ВІДГУКІВ</div>
+      <span class="reviews-stat-label">Від наших покупців</span>
+    </div>
+    <div class="reviews-stat-divider"></div>
+    <div class="reviews-stat-item reviews-stat-bars">
+      <div class="rev-bar-row"><span>5★</span><div class="rev-bar-track"><div class="rev-bar-fill" id="bar5" style="width:83%"></div></div><span id="cnt5">7</span></div>
+      <div class="rev-bar-row"><span>4★</span><div class="rev-bar-track"><div class="rev-bar-fill" id="bar4" style="width:17%"></div></div><span id="cnt4">1</span></div>
+      <div class="rev-bar-row"><span>3★</span><div class="rev-bar-track"><div class="rev-bar-fill" id="bar3" style="width:0%"></div></div><span id="cnt3">0</span></div>
+      <div class="rev-bar-row"><span>2★</span><div class="rev-bar-track"><div class="rev-bar-fill" id="bar2" style="width:0%"></div></div><span id="cnt2">0</span></div>
+      <div class="rev-bar-row"><span>1★</span><div class="rev-bar-track"><div class="rev-bar-fill" id="bar1" style="width:0%"></div></div><span id="cnt1">0</span></div>
+    </div>
+  </div>
+
+  <div class="reviews-track-wrap">
+    <button class="rev-nav rev-nav-prev" onclick="revNav(-1)" aria-label="Попередній">‹</button>
+    <div class="reviews-track" id="reviewsTrack">
+      <div id="revLoadingMsg" style="display:none;width:100%;text-align:center;padding:40px;color:var(--text-muted);font-family:sans-serif;font-size:14px;">🐝 Завантажуємо відгуки...</div>
+    </div>
+    <button class="rev-nav rev-nav-next" onclick="revNav(1)" aria-label="Наступний">›</button>
+  </div>
+  <div class="reviews-dots" id="reviewsDots"></div>
+
+  <div class="reviews-cta reveal">
+    <button class="btn-write-review" onclick="openReviewForm()">✍️ Написати відгук</button>
+  </div>
+</section>
+
+<!-- ===== REVIEW MODAL ===== -->
+<div class="rev-modal-overlay" id="revModal" onclick="handleRevModalClick(event)">
+  <div class="rev-modal-box" id="revModalBox">
+    <div class="rev-modal-header">
+      <span class="rev-modal-title">Ваш відгук</span>
+      <button class="rev-modal-close" onclick="closeReviewForm()">✕</button>
+    </div>
+    <div class="rev-modal-body" id="revModalBodyInner">
+      <div class="rev-field">
+        <label>Ваше ім'я *</label>
+        <input type="text" id="revName" placeholder="Іван Петренко" maxlength="50"/>
+      </div>
+      <div class="rev-field">
+        <label>Місто</label>
+        <input type="text" id="revCity" placeholder="Полтава" maxlength="50"/>
+      </div>
+      <div class="rev-field">
+        <label>Оцінка *</label>
+        <div class="rev-star-picker" id="revStarPicker">
+          <span class="rev-star-opt" data-val="1" onclick="pickStar(1)">★</span>
+          <span class="rev-star-opt" data-val="2" onclick="pickStar(2)">★</span>
+          <span class="rev-star-opt" data-val="3" onclick="pickStar(3)">★</span>
+          <span class="rev-star-opt" data-val="4" onclick="pickStar(4)">★</span>
+          <span class="rev-star-opt" data-val="5" onclick="pickStar(5)">★</span>
+        </div>
+        <input type="hidden" id="revStarVal" value="0"/>
+      </div>
+      <div class="rev-field">
+        <label>Продукт</label>
+        <select id="revProduct">
+          <option value="">— Оберіть продукт —</option>
+          <option>Акацієвий мед</option>
+          <option>Соняшниковий мед</option>
+          <option>Різнотравний мед</option>
+          <option>Гречаний мед</option>
+          <option>Бджолиний пилок</option>
+          <option>Бджолина перга</option>
+          <option>Мед у стільниках</option>
+          <option>Маточне молочко</option>
+          <option>Трутневий гомогенат</option>
+          <option>Бджолопакети</option>
+        </select>
+      </div>
+      <div class="rev-field">
+        <label>Відгук *</label>
+        <textarea id="revText" placeholder="Розкажіть про ваші враження від меду..." maxlength="500" rows="4"></textarea>
+        <span class="rev-char-count" id="revCharCount">0 / 500</span>
+      </div>
+      <div id="revModalError" class="rev-modal-error" style="display:none"></div>
+      <button class="rev-submit-btn" id="revSubmitBtn" onclick="submitReview()">Надіслати відгук 🍯</button>
+    </div>
+    <div class="rev-modal-success" id="revModalSuccess" style="display:none">
+      <div style="font-size:52px;margin-bottom:12px">🍯</div>
+      <div class="rev-success-title">Дякуємо за відгук!</div>
+      <div class="rev-success-sub">Ваш відгук з'явиться після модерації 🐝</div>
+    </div>
+  </div>
+</div>
+
+<div class="stripe-accent"></div>
+
+<section id="contacts" class="contacts">
+  <div class="section-title reveal"><h2>Контакти</h2><div class="divider"></div><p>Є питання? Пишіть або дзвоніть — відповімо швидко!</p></div>
+  <div class="contacts-grid">
+    <div class="contact-item reveal"><div class="c-icon">📱</div><h4>Telegram</h4><a href="tel:0667591398">0667591398</a></div>
+    <div class="contact-item reveal"><div class="c-icon">📞</div><h4>Viber / Тел</h4><a href="tel:0667591398">0667591398</a></div>
+    <div class="contact-item reveal"><div class="c-icon">📍</div><h4>Розташування</h4><p>Полтавська обл., Україна</p></div>
+  </div>
+</section>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-overlay" id="productModal" onclick="handleModalClick(event)">
+  <div class="modal-box" id="modalBox">
+    <div class="modal-hex-top"></div>
+    <div class="modal-close"><button class="modal-close-btn" onclick="closeModal()" aria-label="Закрити">✕</button></div>
+    <div class="modal-body">
+
+      <div class="modal-hero">
+        <div class="modal-emoji-wrap">
+          <div class="modal-emoji-glow"></div>
+          <span id="modalEmoji"></span>
+        </div>
+        <div class="modal-info-top">
+          <h2 id="modalTitle"></h2>
+          <p class="modal-tagline" id="modalTagline"></p>
+          <div class="modal-badges" id="modalBadges"></div>
+
+          <div class="modal-taste" id="modalTasteWrap">
+            <div class="modal-taste-title">Профіль смаку</div>
+            <div id="modalTasteBars"></div>
+          </div>
+
+          <div class="modal-picker">
+            <div class="modal-picker-label">Оберіть вагу</div>
+            <div class="modal-weight-row" id="modalWeights"></div>
+          </div>
+          <div class="modal-picker" id="modalContainerPicker" style="display:none">
+            <div class="modal-picker-label">Оберіть тару</div>
+            <div class="modal-container-row">
+              <div class="modal-container-tag active" data-container="plastic" onclick="selectContainer(this)">
+                <span class="mc-icon">🥤</span>
+                <span class="mc-label">Пластик</span>
+                <span class="mc-note">стандартна ціна</span>
+              </div>
+              <div class="modal-container-tag" data-container="glass" onclick="selectContainer(this)">
+                <span class="mc-icon">🫙</span>
+                <span class="mc-label">Скло</span>
+                <span class="mc-note" id="glassNote">+20 грн</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-price-block">
+            <div>
+              <div id="modalPriceOld" class="modal-price-old" style="display:none"></div>
+              <div id="modalPriceMain" class="modal-price-main"></div>
+            </div>
+            <span id="modalPriceNote" class="modal-price-note"></span>
+          </div>
+          <button class="modal-btn-order" id="modalOrderBtn" onclick="orderFromModal()">🍯 Замовити зараз</button>
+        </div>
+      </div>
+
+      <div class="modal-divider"></div>
+
+      <div class="modal-tabs">
+        <div class="modal-tab active" onclick="switchTab(this,'desc')">Опис</div>
+        <div class="modal-tab" onclick="switchTab(this,'health')">Корисні властивості</div>
+        <div class="modal-tab" onclick="switchTab(this,'delivery')">Доставка та оплата</div>
+      </div>
+
+      <div class="modal-tab-content active" id="tab-desc">
+        <div class="modal-desc" id="modalDesc"></div>
+      </div>
+      <div class="modal-tab-content" id="tab-health">
+        <div class="modal-health-grid" id="modalHealth"></div>
+      </div>
+      <div class="modal-tab-content" id="tab-delivery">
+        <div class="modal-delivery-grid">
+          <div class="modal-free-delivery-banner">🚚 При замовленні від <strong>1000 грн</strong> — доставка безкоштовна!</div>
+          <div class="modal-delivery-item"><span class="mdi">🚚</span><h4>Нова Пошта</h4><p>1–3 дні по всій Україні. Відправляємо 1–2 рази на тиждень. Надійна упаковка — мед доїжджає цілим.</p></div>
+          <div class="modal-delivery-item"><span class="mdi">📮</span><h4>Укрпошта</h4><p>3–5 робочих днів. Підходить для віддалених населених пунктів. Відстеження посилки онлайн.</p></div>
+          <div class="modal-delivery-item"><span class="mdi">📦</span><h4>Упаковка</h4><p>Скляна банка або харчовий пластик. Для посилок — додаткова захисна обгортка.</p></div>
+        </div>
+        <div class="modal-payment-row">
+          <div class="modal-payment-item"><span class="mp-icon">💳</span><span class="mp-title">Передоплата</span><span class="mp-desc">На картку Приват/Моно. Підтвердження — скрін оплати у Viber або Telegram.</span></div>
+          <div class="modal-payment-item"><span class="mp-icon">📦</span><span class="mp-title">Накладений платіж</span><span class="mp-desc">Оплата при отриманні на відділенні Нової Пошти або Укрпошти.</span></div>
+        </div>
+        <div style="margin-top:24px">
+          <button class="modal-btn-order" id="modalOrderBtn2" onclick="orderFromModal()">🍯 Замовити зараз</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-hex-bg"></div>
+  <div class="footer-glow-l"></div>
+  <div class="footer-glow-r"></div>
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <!-- Бренд -->
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img class="footer-logo-img" src="logo.png" alt="Братани Honey"/>
+          <div>
+            <span class="footer-brand-name">БРАТАНИ</span>
+            <span class="footer-brand-sub">HONEY · ПОЛТАВЩИНА</span>
+          </div>
+        </div>
+        <p class="footer-brand-desc">Натуральний мед від двох братанів з Полтавської області. Власна пасіка, нульова хімія, максимум турботи про вас.</p>
+        <div class="footer-free-delivery">🚚 Безкоштовна доставка від 1000 грн</div>
+        <div class="social-row">
+          <a class="social-btn" href="https://t.me/Marineta_1" title="Telegram" target="_blank">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.facebook.com/share/1Q2Fo1fv9p/?mibextid=wwXIfr" title="Facebook" target="_blank">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.instagram.com/honey_nasoloda" title="Instagram" target="_blank">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.tiktok.com/@romadanilkin0506_?_r=1&_t=ZS-95fqecOnB6y" title="TikTok" target="_blank">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Десктопні колонки -->
+      <div class="footer-cols-desktop">
+
+        <div class="footer-col">
+          <div class="footer-col-title">Продукція</div>
+          <ul>
+            <li><a href="#product-acacia">Акацієвий мед</a></li>
+            <li><a href="#product-sunflower">Соняшниковий мед</a></li>
+            <li><a href="#product-wildflower">Різнотравний мед</a></li>
+            <li><a href="#product-buckwheat">Гречаний мед</a></li>
+            <li><a href="#product-pollen">Бджолиний пилок</a></li>
+            <li><a href="#product-perga">Бджолина перга</a></li>
+            <li><a href="#product-comb">Мед у стільниках</a></li>
+            <li><a href="#product-royal">Маточне молочко</a></li>
+            <li><a href="#product-drone">Трутневий гомогенат</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Інформація</div>
+          <ul>
+            <li><a href="#wholesale">Оптові замовлення</a></li>
+            <li><a href="#business">Для бджолярів</a></li>
+            <li><a href="#apiary">Наша пасіка</a></li>
+            <li><a href="#beekeepers">Про братанів</a></li>
+            <li><a href="#organic">Органіка</a></li>
+            <li><a href="#health">Користь меду</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Контакти</div>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item"><span class="fc-icon">📱</span><a href="https://t.me/Marineta_1">Telegram: @Marineta_1</a></div>
+            <div class="footer-contact-item"><span class="fc-icon">📞</span><a href="tel:0667591398">0667591398</a></div>
+            <div class="footer-contact-item"><span class="fc-icon">📞</span><a href="tel:0667591398">0667591398</a></div>
+            <div class="footer-contact-item"><span class="fc-icon">📍</span><span>Полтавська обл., Україна</span></div>
+            <div class="footer-contact-item"><span class="fc-icon">🚚</span><span>Безкоштовна доставка від 1000 грн</span></div>
+          </div>
+          <a href="#order" class="footer-order-btn">Замовити мед 🍯</a>
+        </div>
+
+      </div>
+
+      <!-- Мобільний акордеон -->
+      <div class="footer-col-accordion-wrap" id="footerAccordions">
+        <div class="footer-col-accordion">
+          <div class="footer-acc-head" onclick="toggleFooterAcc(this)">
+            Продукція <span class="acc-arrow">▾</span>
+          </div>
+          <div class="footer-acc-body">
+            <ul>
+              <li><a href="#product-acacia">Акацієвий мед</a></li>
+              <li><a href="#product-sunflower">Соняшниковий мед</a></li>
+              <li><a href="#product-wildflower">Різнотравний мед</a></li>
+              <li><a href="#product-buckwheat">Гречаний мед</a></li>
+              <li><a href="#product-pollen">Бджолиний пилок</a></li>
+              <li><a href="#product-perga">Бджолина перга</a></li>
+              <li><a href="#product-comb">Мед у стільниках</a></li>
+              <li><a href="#product-royal">Маточне молочко</a></li>
+              <li><a href="#product-drone">Трутневий гомогенат</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col-accordion">
+          <div class="footer-acc-head" onclick="toggleFooterAcc(this)">
+            Інформація <span class="acc-arrow">▾</span>
+          </div>
+          <div class="footer-acc-body">
+            <ul>
+              <li><a href="#wholesale">Оптові замовлення</a></li>
+              <li><a href="#business">Для бджолярів</a></li>
+              <li><a href="#apiary">Наша пасіка</a></li>
+              <li><a href="#beekeepers">Про братанів</a></li>
+              <li><a href="#organic">Органіка</a></li>
+              <li><a href="#delivery">Доставка</a></li>
+              <li><a href="#order">Замовити</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col-accordion">
+          <div class="footer-acc-head" onclick="toggleFooterAcc(this)">
+            Контакти <span class="acc-arrow">▾</span>
+          </div>
+          <div class="footer-acc-body">
+            <div class="footer-contact-list">
+              <div class="footer-contact-item"><span class="fc-icon">📱</span><a href="https://t.me/Marineta_1">Telegram: @Marineta_1</a></div>
+              <div class="footer-contact-item"><span class="fc-icon">📞</span><a href="tel:0667591398">0667591398</a></div>
+              <div class="footer-contact-item"><span class="fc-icon">📞</span><a href="tel:0667591398">0667591398</a></div>
+              <div class="footer-contact-item"><span class="fc-icon">📍</span><span>Полтавська обл., Україна</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Братани Honey · Всі права захищені</span>
+      <div class="footer-honey-badge">
+        <span>🍯</span>
+        <span>Зроблено з <span style="color:var(--gold)">любов'ю</span> в Україні</span>
+      </div>
+      <span class="footer-copy">Полтавська обл. · Натуральний мед</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== TELEGRAM BUBBLE ===== -->
+<div class="tg-bubble" id="tgBubble">
+
+  <!-- Popup panel -->
+  <div class="tg-popup" id="tgPopup">
+    <div class="tg-popup-header">
+      <div class="tg-popup-avatar">🐝</div>
+      <div>
+        <div class="tg-popup-name">Братани Honey</div>
+        <div class="tg-popup-status">Онлайн · відповідаємо швидко</div>
+      </div>
+      <button class="tg-popup-close" onclick="closeTgPopup()" aria-label="Закрити">✕</button>
+    </div>
+    <div class="tg-popup-msg">
+      <div class="tg-msg-bubble">
+        Привіт! 🍯 Маєте питання про мед або хочете замовити? Пишіть — відповімо одразу!
+      </div>
+      <div class="tg-msg-time">щойно</div>
+    </div>
+    <div class="tg-popup-actions">
+      <a class="tg-action-btn tg-action-username" href="https://t.me/Marineta_1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Написати @Marineta_1
+      </a>
+      <a class="tg-action-btn tg-action-phone" href="https://t.me/+380667591398" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        +380 (66) 759 13 98
+      </a>
+    </div>
+  </div>
+
+  <!-- Main bubble button -->
+  <button class="tg-btn" id="tgBtn" onclick="toggleTgPopup()" aria-label="Написати в Telegram">
+    <span class="tg-btn-icon tg-icon-tg">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    </span>
+    <span class="tg-btn-icon tg-icon-close" style="display:none">✕</span>
+    <span class="tg-badge" id="tgBadge">1</span>
+  </button>
+
+</div>
+
+<!-- iOS close btn: outside modal-overlay so backdrop-filter does not trap position:fixed -->
+<button class="modal-close-fixed" id="modalCloseFixedBtn" onclick="closeModal()" aria-label="Закрити">✕</button>
+<script src="script.js"></script>
