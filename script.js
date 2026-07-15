@@ -252,7 +252,7 @@ var PRODUCTS = {
     ]
   },
   'acacia_mix': {
-    emoji:'🍯', image:'acacia_amorfa_landscape.JPG', title:'Акацієвий мед (з Аморфою)',
+    emoji:'🍯', image:'acacia_amorfa_landscape.jpg', title:'Акацієвий мед (з Аморфою)',
     tagline:'Акація з домішкою лугового різнотрав\'я — м\'який смак та доступна ціна.',
     badges:['Акація + різнотрав\'я','Ніжний смак','Вигідна ціна'],
     prices:{'1 л':500},
@@ -390,7 +390,7 @@ var PRODUCTS = {
     ]
   },
   'pollen': {
-    emoji:'🍯',image:'pollen2_full_square_dark.JPG',  title:'Бджолиний пилок',
+    emoji:'🍯',image:'pollen2_full_square_dark.jpg',  title:'Бджолиний пилок',
     tagline:'Суперфуд прямо з квітки — концентрат вітамінів, мінералів та амінокислот.',
     badges:['Суперфуд','200+ речовин','Природна аптека'],
     prices:{'100 г':60,'200 г':120,'500 г':250,'1 кг':470},
@@ -412,7 +412,7 @@ var PRODUCTS = {
     ]
   },
   'comb': {
-    emoji:'🍯',image:'comb_full_square_dark.JPG', title:'Мед у стільниках',
+    emoji:'🍯',image:'comb_full_square_dark.jpg', title:'Мед у стільниках',
     tagline:'Мед у своїй найприроднішій формі — прямо з рамки, у восковому стільнику.',
     badges:['100% натуральний','З воском','Максимум свіжості'],
     prices:{'100 г':100,'500 г':500},
@@ -434,7 +434,7 @@ var PRODUCTS = {
     ]
   },
   'alpine-frame': {
-   emoji:'🍯', image:'comb_frame_full_square_dark.JPG', title:"Альпійська рамка (лісовий мед)",
+   emoji:'🍯', image:'comb_frame_full_square_dark.jpg', title:"Альпійська рамка (лісовий мед)",
     tagline:"Стільниковий мед прямо в дерев'яній рамці — лісове різнотрав'я, зібране в чистих передгір'ях.",
     badges:['У стільниках','Лісовий збір','Без обробки'],
     prices:{'500 г':850}, // ⚠️ ціна орієнтовна — постав свою, коли визначишся
